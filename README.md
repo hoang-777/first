@@ -72,8 +72,13 @@ is run in constant time, statistics are also automatically calculated.
 ## Further Steps
 
 If time would allow, test would be made. There are many exceptions that need to be added.
-Furthermore, some calculation of statistics was not optimal and it could be further improved. I'm also aware that the code needs a lot of optimisation.
+Furthermore, some calculation of statistics was not optimal and it could be further improved. I would use for example custom collectors for computation. I'm also aware that the code needs a lot of optimisation.
+Currently, the call
+```bash
+/statistics/{id}
+```
+is not in O(1) but this can be changed by using the same method as it was done with aggregate statistics.
 
 ## Comments
 Overall I very enjoyed the task. I learned a lot and brushed up my java skills, since it was the first time that I had to build an API and haven't used java for 4 years.
-Regardless, it was for me a very valuable experience, thank you for your time! 
+Regardless, it was for me a very valuable experience, thank you for your time. I would be happy to get any feedback to improve for the future!
