@@ -1,6 +1,6 @@
-# Transactions API
+# Financial Instruments API
 
-Objective: API to store live transactions and calculate statistics.
+Objective: API to store live financial data and calculate statistics.
 
 ## Running
 
@@ -9,8 +9,8 @@ Start the terminal, from the main repository run
 ```bash
 ./mvnw spring-boot:run
 ```
-### Adding Transactions
-To add transactions with the format
+### Adding Ticks
+To add financial data with the format
 ```json
 {"instrument":"DB",
 "price":101.1, 
@@ -21,7 +21,7 @@ run from the terminal
 ```bash
 curl -d '{"instrument":"DB","price":101.1, "timestamp":1586116436151}' -H "Content-Type: application/json" -X POST -i localhost:8080/ticks
 ```
-### Getting Statistics for all transactions
+### Getting Statistics for all data
 Run from the command line
 ```bash
 curl -X GET localhost:8080/statistics
@@ -40,7 +40,7 @@ The output should be
 ```
 
 
-### Getting Statistics for transactions with a particular id
+### Getting Statistics for financial data with a particular id
 
 ```bash
 curl -X GET localhost:8080/statistics/{id}
@@ -63,7 +63,7 @@ in the example with id GOS, the output should be
 ```
 ## Approach
 
-Scheduler was set to clean the data from the old transactions. Additionally to assure that 
+Scheduler was set to clean the data from the old financial data. Additionally to assure that 
 ```bash
 curl -X GET localhost:8080/statistics
 ```
